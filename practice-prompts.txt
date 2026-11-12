@@ -1,0 +1,26 @@
+CREATE THE CANVAS
+
+@interactive-canvas Create an interactive dashboard called "Penguin Field Guide" from the Penguins Excel table for a beginner exploring how penguin species differ in size. Keep it connected to the table and leave the source data unchanged.
+
+Show cards for observation count, average body mass in grams, and the number of nonblank body-mass measurements. Add a species-count bar chart, average body mass by species, and a scatterplot of flipper length (mm) versus body mass (g), distinguished by species.
+
+Add species and island filters and a Reset filters button; all cards and charts must use the same filtered rows. Count every row as an observation. Exclude missing measurements only from calculations or plots that need them; never treat blanks as zero. Show the sample size and units, and a clear message for an empty result.
+
+Use a white background (#FFFFFF), red (#CF3338), charcoal (#1F2120), gray, and readable Arial text. Keep the layout uncluttered. Do not invent a logo, add decorative arrows, or make causal claims.
+
+MAKE ONE TARGETED REVISION
+
+In the existing Penguin Field Guide canvas, change the average-body-mass card heading to "Mean body mass (g)". Keep the calculations, filters, source data, and other layout elements unchanged. Report what changed.
+
+CHECK THE CALCULATIONS
+
+Explain which rows and columns feed each dashboard metric and how missing values and filters are handled. Put the full-data observation count, nonblank body-mass count, and mean body mass in ordinary worksheet cells using Excel formulas that reference the Penguins table. Keep the source data unchanged.
+
+Independent formulas to enter in unused worksheet cells:
+=ROWS(Penguins[species])
+=COUNT(Penguins[body_mass_g])
+=AVERAGE(Penguins[body_mass_g])
+=COUNTIF(Penguins[species],"Gentoo")
+=AVERAGEIF(Penguins[species],"Gentoo",Penguins[body_mass_g])
+
+Read the article for the checks to perform on the generated result. An explanation from Copilot does not replace checking the actual numbers.
